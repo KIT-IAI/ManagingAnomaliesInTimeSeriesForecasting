@@ -1,0 +1,7 @@
+import pipelines.anomaly_compensation.copy_paste_imputation
+import pipelines.anomaly_compensation.cpi_power_averaging
+import pipelines.anomaly_compensation.forecasting
+import pipelines.anomaly_compensation.identity
+import pipelines.anomaly_compensation.linear_interpolation
+import pipelines.anomaly_compensation.my_prophet
+import pipelines.anomaly_compensation.owa
