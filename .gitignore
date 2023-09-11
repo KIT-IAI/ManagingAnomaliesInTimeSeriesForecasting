@@ -150,7 +150,6 @@ run
 run_train
 
 # Data
-*.csv
 backup/
 
 
