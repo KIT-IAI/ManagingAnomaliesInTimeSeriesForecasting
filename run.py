@@ -22,16 +22,16 @@ for seed in range(1, 2):
         # UCI technical
         # - unsupervised
         if "forecast_with_compensated_anomalies" in e:
-            all_processes.append("python pipeline.py UCI-Technical-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_small.csv \"data/technical/num_anomalies_20/VAE/cinn_sup:False_FunctionModule.csv\" --insertion_method identity --compensation_method my_prophet --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results6_" + str(e) + ".csv")
+            all_processes.append("python pipeline.py UCI-Technical-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_small.csv \"data/technical/num_anomalies_20/VAE/cinn_sup-False_FunctionModule.csv\" --insertion_method identity --compensation_method my_prophet --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results6_" + str(e) + ".csv")
         else:
-            all_processes.append("python pipeline.py UCI-Technical-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_small.csv \"data/technical/num_anomalies_20/VAE/cinn_sup:False_FunctionModule.csv\" --insertion_method identity --compensation_method identity --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results6_" + str(e) + ".csv")
+            all_processes.append("python pipeline.py UCI-Technical-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_small.csv \"data/technical/num_anomalies_20/VAE/cinn_sup-False_FunctionModule.csv\" --insertion_method identity --compensation_method identity --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results6_" + str(e) + ".csv")
 
         # UCI unusual
         # - unsupervised
         if "forecast_with_compensated_anomalies" in e:
-            all_processes.append("python pipeline.py UCI-Unusual-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_unusual_behaviour.csv \"data/unusual/num_anomalies_20/LOF/cvae_sup:False_FunctionModule.csv\" --insertion_method identity --compensation_method my_prophet --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results16_" + str(e) + ".csv")
+            all_processes.append("python pipeline.py UCI-Unusual-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_unusual_behaviour.csv \"data/unusual/num_anomalies_20/LOF/cvae_sup-False_FunctionModule.csv\" --insertion_method identity --compensation_method my_prophet --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results16_" + str(e) + ".csv")
         else:
-            all_processes.append("python pipeline.py UCI-Unusual-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_unusual_behaviour.csv \"data/unusual/num_anomalies_20/LOF/cvae_sup:False_FunctionModule.csv\" --insertion_method identity --compensation_method identity --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results16_" + str(e) + ".csv")
+            all_processes.append("python pipeline.py UCI-Unusual-Unsup data/in_train_ID200.csv \"index\" \"0\" data/out_train_ID200_20_20_20_20_unusual_behaviour.csv \"data/unusual/num_anomalies_20/LOF/cvae_sup-False_FunctionModule.csv\" --insertion_method identity --compensation_method identity --experiment " + str(e) + f" --seed {seed} --detection_type unsupervised --logging svr/run{seed}/results16_" + str(e) + ".csv")
 
 def execute(process):
     os.system(f'{process}')
