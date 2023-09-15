@@ -142,7 +142,7 @@ python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/python-dateu
 python-json-logger==2.0.4
 pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1647961439546/work
 pywatts @ git+https://github.com/KIT-IAI/pyWATTS@0033549cc52a6f8d8c53ce7c1e2cf12c33926b52
-pywatts-pipeline @ git+https://github.com/KIT-IAI/pywatts-pipeline/@a383fbcecee45f13945dd038e5b0ea93b021ab17
+pywatts-pipeline @ git+https://github.com/KIT-IAI/pywatts-pipeline@main
 PyYAML==6.0
 pyzmq==25.0.0
 qtconsole==5.4.0

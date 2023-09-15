@@ -111,7 +111,7 @@ dependencies:
     - cloudpickle==2.0.0
     - comm==0.1.2
     - coverage==6.3.2
-    - cpi-ets==0.0.2
+    - cpi-ets @ git+https://github.com/KIT-IAI/CopyPasteImputation.git@6c46574023ceb03f1965eb5786a13065fef72ec3
     - debugpy==1.6.6
     - decorator==5.1.1
     - defusedxml==0.7.1
@@ -121,7 +121,7 @@ dependencies:
     - distlib==0.3.6
     - docutils==0.17.1
     - dtaidistance==2.3.6
-    - esax==1.0.0
+    - esax @ git+https://github.com/KIT-IAI/eSAX.git@385b71497e73fbfad34e8aaecabe7776630e4e3b
     - executing==0.8.3
     - fastjsonschema==2.16.2
     - flatbuffers==2.0
@@ -217,8 +217,8 @@ dependencies:
     - pytest-cov==3.0.0
     - python-json-logger==2.0.4
     - pytz==2021.3
-    - pywatts==0.3.0
-    - pywatts-pipeline==0.1.0
+    - pywatts @ git+https://github.com/KIT-IAI/pyWATTS@0033549cc52a6f8d8c53ce7c1e2cf12c33926b52
+    - pywatts-pipeline @ git+https://github.com/KIT-IAI/pywatts-pipeline/@main
     - pyyaml==6.0
     - pyzmq==25.0.0
     - qtconsole==5.4.0
