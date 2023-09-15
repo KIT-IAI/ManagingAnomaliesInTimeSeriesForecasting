@@ -1,4 +1,3 @@
-import pipelines.forecasting.compensated_anomalies_forecasting.current_value
 import pipelines.forecasting.compensated_anomalies_forecasting.last_day
 import pipelines.forecasting.compensated_anomalies_forecasting.last_week
 import pipelines.forecasting.compensated_anomalies_forecasting.lr

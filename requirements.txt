@@ -8,8 +8,6 @@ pandas==1.4.1
 pyod==1.0.1
 pytest==7.0.1
 pywatts @ git+https://github.com/KIT-IAI/pyWATTS@0033549cc52a6f8d8c53ce7c1e2cf12c33926b52
-# pywatts-pipeline @ git+https://github.com/KIT-IAI/pywatts-pipeline/@a383fbcecee45f13945dd038e5b0ea93b021ab17
-pywatts-pipeline @ git+https://github.com/KIT-IAI/pywatts-pipeline/@main
 scikit-learn==1.0.2
 seaborn==0.12.2
 workalendar==16.3.0

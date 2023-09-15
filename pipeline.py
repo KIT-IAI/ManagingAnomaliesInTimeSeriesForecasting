@@ -8,9 +8,7 @@ import numpy as np
 import pandas as pd
 
 from steps.compensation_step import compensation_step
-from steps.detection_step import detection_step
 from steps.forecast_step import forecast_step
-from steps.insertion_step import insertion_step
 from steps.loading_step import loading_step
 
 
@@ -71,46 +69,6 @@ def parse_hparams(args=None):
     # debugging
     parser.add_argument('--debug', action='store_true',
                         help='Turn on pipeline debugging output.')
-
-    # insertion_step
-    parser.add_argument('--insertion_method', type=str, default='identity',
-                        help='Anomaly insertion method to be chosen.')
-    parser.add_argument('--anomaly_group', choices=['technical', 'unusual'], default='technical',
-                        help='Specify group of anomaly types to be inserted.')
-    parser.add_argument('--type1', type=str2intorfloat, nargs='?', const=True, default=0,
-                        help='Percentage or absolute number of type 1 anomalies.')
-    parser.add_argument('--type2', type=str2intorfloat, nargs='?', const=True, default=0,
-                        help='Percentage or absolute number of type 2 anomalies.')
-    parser.add_argument('--type3', type=str2intorfloat, nargs='?', const=True, default=0,
-                        help='Percentage or absolute number of type 3 anomalies.')
-    parser.add_argument('--type4', type=str2intorfloat, nargs='?', const=True, default=0,
-                        help='Percentage or absolute number of type 4 anomalies.')
-    # anomaly params: Types 1 and 3
-    parser.add_argument('--k', type=int, default=17,
-                        help='Energy offset of type 1 and 3 anomalies.')
-
-    # detection_step
-    parser.add_argument('--detection_method', type=str, default='statistical',
-                        help='Detection method to be chosen.')
-    parser.add_argument('--detect_esax_anomaly_resolution', type=str, default='point',
-                        help='Resolution of anomaly search (point - points can be anomalous, day - days are anomalous')
-    parser.add_argument('--detect_esax_anomaly_identification', type=str, default='threshold',
-                        help='Defines which criteria are used to identify anomalies (threshold - distance of a point'
-                             'in a sequence to the reference value, quantiles - Membership of a point to a quantile)')
-    parser.add_argument('--detect_esax_quantiles_lower', type=float, default=0.0,
-                        help='Defines the lower quantile of the set of sequences in the motif,'
-                             'that are used for anomaly detection')
-    parser.add_argument('--detect_esax_quantiles_upper', type=float, default=1.0,
-                        help='Defines the lower quantile of the set of sequences in the motif,'
-                             'that are used for anomaly detection')
-    parser.add_argument('--detect_statistical_target', type=str, default=None,
-                        help='Target of statistical detection method (e.g. hour, week, overall, ...).')
-    parser.add_argument('--detect_statistical_threshold', type=float, default=2,
-                        help='Threshold to be used for mean +- thresh * std to detect anomalies.')
-    parser.add_argument('--detect_forecasting_method', type=str, default='ar',
-                        help='Forecasting detection method (e.g. last_week, ar, ...).')
-    parser.add_argument('--detect_forecasting_threshold', type=float, default=2,
-                        help='Threshold to be used for mean +- thresh * std to detect anomalies.')
 
     # compensation_step
     parser.add_argument('--compensation_method', type=str, default='my_prophet',
@@ -177,8 +135,6 @@ def run_pipeline(hparams):
 
     # log results into csv regarding hparams
     if hparams.logging is not None:
-        # log_results(hparams, insert_results, f'{hparams.logging}_insert.csv')
-        # log_results(hparams, detect_results, f'{hparams.logging}_detect.csv')
         log_results(hparams, compensate_results, f'{hparams.logging}_compensate.csv')
         log_results(hparams, forecast_results, f'{hparams.logging}_forecast.csv')
 
