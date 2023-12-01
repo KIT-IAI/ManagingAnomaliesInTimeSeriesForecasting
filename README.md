@@ -1,7 +1,7 @@
 # Managing Anomalies in Energy Time Series for Automated Forecasting
 
 This repository contains the Python implementation of experiments to manage anomalies in energy time series presented in the following paper:
->M. Turowski, O. Neumann, L. Mannsperger, K. Kraus, K. Layer, R. Mikut, and V. Hagenmeyer, "Managing Anomalies in Energy Time Series for Automated Forecasting" in Energy Informatics, XX, Y, doi: tbd.
+>M. Turowski, O. Neumann, L. Mannsperger, K. Kraus, K. Layer, R. Mikut, and V. Hagenmeyer, 2024, "Managing Anomalies in Energy Time Series for Automated Forecasting," in Energy Informatics: EI.A 2023, Ed. by B. N. Jørgensen, L. C. P. da Silva, and Z. Ma, Springer Nature Switzerland, pp. 3–29. doi: [10.1007/978-3-031-48649-4_1](https://doi.org/10.1007/978-3-031-48649-4_1).
 
 
 ## Installation
